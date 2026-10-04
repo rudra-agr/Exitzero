@@ -1,0 +1,6 @@
+/app/src/index.js:45
+  const result = await fetchUser(id).name
+                                    ^
+TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (/app/src/index.js:45:36)
+    at async handler (/app/src/routes.js:12:18)

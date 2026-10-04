@@ -1,0 +1,30 @@
+collected 5 items
+
+tests/test_auth.py::test_login FAILED
+tests/test_db.py::test_connection FAILED
+tests/test_api.py::test_endpoint FAILED
+
+FAILED tests/test_auth.py::test_login - AssertionError: expected 200 got 401
+FAILED tests/test_db.py::test_connection - ConnectionRefusedError: [Errno 111] Connection refused
+FAILED tests/test_api.py::test_endpoint - TypeError: expected str got NoneType
+
+===========================
+
+Traceback (most recent call last):
+  File "tests/test_auth.py", line 12, in test_login
+    assert response.status_code == 200
+AssertionError: expected 200 got 401
+
+===========================
+
+Traceback (most recent call last):
+  File "tests/test_db.py", line 8, in test_connection
+    conn = psycopg2.connect(DATABASE_URL)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+===========================
+
+Traceback (most recent call last):
+  File "tests/test_api.py", line 67, in test_endpoint
+    return process(data.value)
+TypeError: expected str got NoneType

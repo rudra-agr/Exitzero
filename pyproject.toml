@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "exitzero"
+version = "0.1.0"
+description = "Local-first CLI that diagnoses failing logs, explains the root cause, and offers safe auto-remediation."
+requires-python = ">=3.12"
+dependencies = [
+    "rich>=13.7.0",
+    "ollama>=0.3.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-mock>=3.14.0",
+]
+
+[project.scripts]
+exitzero = "exitzero.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["exitzero*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
