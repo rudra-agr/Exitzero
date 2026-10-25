@@ -1,0 +1,2 @@
+Error: Unable to resolve module ./components/MissingComponent
+from app/index.tsx: ./components/MissingComponent could not be found
