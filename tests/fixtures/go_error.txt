@@ -1,0 +1,5 @@
+--- FAIL: TestUserCreate (0.12s)
+    user_test.go:28: expected status 201, got 400
+    user_test.go:29: response body: {"error":"email already exists"}
+FAIL
+FAIL    github.com/org/app/user    0.134s

@@ -1,0 +1,11 @@
+error[E0382]: use of moved value: `config`
+  --> src/server.rs:42:18
+   |
+38 |     let config = Config::load("settings.toml");
+   |         ------ move occurs because `config` has type `Config`, which does not implement the `Copy` trait
+41 |     start_server(config);
+   |                  ------ value moved here
+42 |     log_config(config);
+   |                ^^^^^^ value used here after move
+
+error: aborting due to previous error

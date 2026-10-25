@@ -1,0 +1,12 @@
+collected 3 items
+
+tests/test_auth.py::test_login PASSED
+tests/test_auth.py::test_logout PASSED
+tests/test_auth.py::test_profile FAILED
+
+FAILED tests/test_auth.py::test_profile - AttributeError: 'NoneType' object has no attribute 'username'
+
+Traceback (most recent call last):
+  File "tests/test_auth.py", line 34, in test_profile
+    assert user.get_profile().username == "senpai"
+AttributeError: 'NoneType' object has no attribute 'username'
